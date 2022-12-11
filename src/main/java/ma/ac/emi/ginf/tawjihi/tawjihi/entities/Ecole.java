@@ -3,8 +3,10 @@ package ma.ac.emi.ginf.tawjihi.tawjihi.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.*;
 import ma.ac.emi.ginf.tawjihi.tawjihi.enumerations.Niveau;
 
+@Data
 @Entity
 public class Ecole {
 
