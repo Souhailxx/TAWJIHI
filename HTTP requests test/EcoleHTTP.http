@@ -1,0 +1,33 @@
+GET http://localhost:8080/ecole/find
+
+###
+
+POST http://localhost:8080/ecole/add
+Content-Type:application/json
+
+{
+  "nom" : "EMI",
+  "ville" : "RAB",
+  "duree" : 3,
+  "nivDebut" : "BAC2",
+  "nivFin" : "BAC5",
+  "description" : "EIOR"
+}
+
+###
+
+POST http://localhost:8080/ecole/add
+Content-Type:application/json
+
+{
+  "nom" : "ENSIAS",
+  "ville" : "RAB",
+  "duree" : 3,
+  "nivDebut" : "BAC2",
+  "nivFin" : "BAC5",
+  "description" : "CHEF CUISINIER"
+}
+
+###
+
+DELETE http://localhost:8080/ecole/delete/ENSIAS

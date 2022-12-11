@@ -1,0 +1,36 @@
+GET http://localhost:8080/eleve/find
+
+###
+
+
+GET http://localhost:8080/eleve/find/2
+
+###
+
+POST http://localhost:8080/eleve/add
+Content-Type:application/json
+
+{
+  "nom": "laamoumri",
+  "prenom": "souhail",
+  "email" : "laamsouhail02@gmail.com",
+  "age": 21,
+  "niveau": "TC"
+}
+
+###
+
+POST http://localhost:8080/eleve/add
+Content-Type:application/json
+
+{
+  "nom": "Malki",
+  "prenom": "Otman",
+  "email" : "MalkiOtman@gmail.com",
+  "age": 21,
+  "niveau": "BAC4"
+}
+
+###
+
+DELETE http://localhost:8080/eleve/delete/2
