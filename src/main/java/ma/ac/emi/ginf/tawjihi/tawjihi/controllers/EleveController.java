@@ -44,7 +44,7 @@ public class EleveController {
     }
 
     @DeleteMapping("/delete/{idE}")
-    public ResponseEntity<?> deletePlane(@PathVariable("idE") int idE) {
+    public ResponseEntity<?> deleteEcole(@PathVariable("idE") int idE) {
         es.deleteEleve(idE);
         return new ResponseEntity<>(HttpStatus.OK);
     }

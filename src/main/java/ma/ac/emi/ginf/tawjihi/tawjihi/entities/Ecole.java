@@ -1,22 +1,31 @@
 package ma.ac.emi.ginf.tawjihi.tawjihi.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.annotation.Nonnull;
+import jakarta.persistence.*;
 import lombok.*;
 import ma.ac.emi.ginf.tawjihi.tawjihi.enumerations.Niveau;
+import ma.ac.emi.ginf.tawjihi.tawjihi.enumerations.Ville;
+import org.hibernate.annotations.Columns;
+
+import java.util.UUID;
 
 @Data
 @Entity
 public class Ecole {
 
     @Id
-    private int idEc;
-
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID idEc;
+    @Nonnull
     private String nom;
-    private String ville;
-    private int duree;  //Duree totale d'etude
+    @Nonnull
+    private Ville ville;
+    @Nonnull
+    private int duree;
+    @Nonnull
     private Niveau nivDebut;
+    @Nonnull
     private Niveau nivFin;
     private String description;
 
