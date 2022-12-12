@@ -1,11 +1,14 @@
 package ma.ac.emi.ginf.tawjihi.tawjihi.repositories;
 
-import ma.ac.emi.ginf.tawjihi.tawjihi.entities.Eleve;
 import ma.ac.emi.ginf.tawjihi.tawjihi.entities.Test;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface EleveRepository extends JpaRepository<Eleve, Integer> {
+import java.util.UUID;
 
-    Eleve getEleveByIdE(int idE);
+public interface TestRepository extends JpaRepository<Test, UUID> {
+
+    Test findTestByEleve_IdE(int idE);
+
+    void deleteTestByEleve_IdE(int idE);
 
 }

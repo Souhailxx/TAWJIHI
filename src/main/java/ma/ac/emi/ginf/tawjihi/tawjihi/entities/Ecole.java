@@ -8,11 +8,12 @@ import ma.ac.emi.ginf.tawjihi.tawjihi.enumerations.Niveau;
 import ma.ac.emi.ginf.tawjihi.tawjihi.enumerations.Ville;
 import org.hibernate.annotations.Columns;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 @Data
-@Entity
-public class Ecole {
+@Entity(name = "Ecoles")
+public class Ecole implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

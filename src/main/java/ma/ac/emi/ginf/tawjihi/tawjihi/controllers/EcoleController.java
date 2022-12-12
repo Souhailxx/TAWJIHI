@@ -4,6 +4,7 @@ import ma.ac.emi.ginf.tawjihi.tawjihi.entities.Ecole;
 import ma.ac.emi.ginf.tawjihi.tawjihi.entities.Eleve;
 import ma.ac.emi.ginf.tawjihi.tawjihi.services.EcoleServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
