@@ -1,14 +1,17 @@
 package ma.ac.emi.ginf.tawjihi.tawjihi.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import ma.ac.emi.ginf.tawjihi.tawjihi.enumerations.Niveau;
 
+import java.io.Serializable;
+
 
 @Data
-@Entity
-public class Eleve {
+@Entity(name = "Eleves")
+public class Eleve implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,4 +27,16 @@ public class Eleve {
     @Column(nullable = false)
     private Niveau niveau;
 
+    @JsonIgnore
+    @OneToOne(mappedBy = "eleve",
+            cascade = CascadeType.ALL)
+    private Test test;
+
+    public void setTest(Test test) {
+        this.test = test;
+    }
+
+    public Test getTest() {
+        return test;
+    }
 }

@@ -1,0 +1,12 @@
+GET http://localhost:8080/test/find/1
+
+###
+
+POST http://localhost:8080/test/add/1
+Content-Type: application/json
+
+{
+  "noteA" : 12,
+  "noteB" : 13,
+  "noteC" : 20
+}

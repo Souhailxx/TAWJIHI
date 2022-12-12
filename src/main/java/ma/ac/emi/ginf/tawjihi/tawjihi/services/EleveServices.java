@@ -34,6 +34,11 @@ public class EleveServices {
         er.deleteById(idE);
     }
 
-//Dqdqsdqsdq
+
+    public Eleve findElevebyId(int idE){
+        return er.getEleveByIdE(idE);
+    }
+
+
 
 }
