@@ -31,9 +31,17 @@ public class TestServices {
     public Test addTest(Test test, int idE){
         Eleve eleve = er.findById(idE)
                 .orElseThrow(() -> new EleveNotFoundException("Eleve by id " + idE + " was not found"));
+
         eleve.setTest(test);
         test.setEleve(eleve);
         return tr.save(test);
+
+    }
+
+    public Test updateTest(Test test,int idE){
+
+        deleteTest(idE);
+        return addTest(test, idE);
     }
 
     @Transactional

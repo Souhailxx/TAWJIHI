@@ -33,4 +33,17 @@ Content-Type:application/json
 
 ###
 
+POST http://localhost:8080/eleve/add
+Content-Type:application/json
+
+{
+  "nom": "Fajwi",
+  "prenom": "Anas",
+  "email" : "FajouiAnas@gmail.com",
+  "age": 23,
+  "niveau": "BAC"
+}
+
+###
+
 DELETE http://localhost:8080/eleve/delete/2

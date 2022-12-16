@@ -1,3 +1,5 @@
+
+
 package ma.ac.emi.ginf.tawjihi.tawjihi.controllers;
 
 import ma.ac.emi.ginf.tawjihi.tawjihi.entities.Eleve;
@@ -32,12 +34,17 @@ public class TestController {
     @PostMapping("/add/{idE}")
     public ResponseEntity<Test> addTest(@RequestBody Test test,
                                         @PathVariable("idE") int idE){
-        /*Test newTest = ts.addTest(test.getNoteA(), test.getNoteB(), test.getNoteC());*/
+
         Test newTest = ts.addTest(test, idE);
-        /*Eleve eleve = es.findElevebyId(idE);
-        eleve.setTest(test);
-        test.setEleve(eleve);*/
         return new ResponseEntity<>(newTest, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/update/{idE}")
+    public ResponseEntity<Test> updateTest(@RequestBody Test test,
+                                           @PathVariable("idE") int idE){
+        ts.deleteTest(idE);
+        Test newTest = ts.addTest(test,idE);
+        return new ResponseEntity<>(newTest, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{idE}")

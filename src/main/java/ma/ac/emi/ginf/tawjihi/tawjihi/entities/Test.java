@@ -26,7 +26,7 @@ public class Test implements Serializable {
     private int noteC;
 
     @OneToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "eleve_id")
+    @JoinColumn(name = "eleve_id", unique = true)
     private Eleve eleve;
 
     public Test(int noteA, int noteB, int noteC) {

@@ -7,6 +7,32 @@ Content-Type: application/json
 
 {
   "noteA" : 12,
-  "noteB" : 13,
-  "noteC" : 20
+  "noteB" : 15,
+  "noteC" : 21
 }
+
+###
+
+POST http://localhost:8080/test/add/3
+Content-Type: application/json
+
+{
+  "noteA" : 19,
+  "noteB" : 20,
+  "noteC" : 6
+}
+
+###
+
+PUT http://localhost:8080/test/update/3
+Content-Type: application/json
+
+{
+  "noteA" : 19,
+  "noteB" : 2202,
+  "noteC" : 60
+}
+
+###
+
+DELETE http://localhost:8080/test/delete/3
